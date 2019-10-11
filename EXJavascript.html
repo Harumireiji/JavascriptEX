@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>EX Javascript Wargnier</title>
+	<link rel="stylesheet" href="cssEXJavascript.css" />
+</head>
+<body>
+
+<h1>EX1.1 à 2.2</h1>
+	<p>Créer un bouton éxécutant une fonction qui multiplie deux nombres.</p>
+	<form>
+		<p>
+			<input type="number" name="num1" id="num1" /> x 
+			<input type="number" name="num2" id="num2" />
+		</p>
+		<input type="button" value="Click" onclick="calculer()"  />
+	</form>
+
+	<p id="result"></p>
+
+<h1>EX 4</h1>
+	<p>
+		4.1- Afficher une variable égale à 0, puis intégrez un bouton qui à chaque clique ajoute 10 à votre variable.<br/>
+		4.2- Ajouter un autre bouton permettant de diviser ce nombre par 5.<br/>
+		4.3- Ajouter ensuite un bouton permettant de multiplier votre variable par 8.<br/>
+		4.4- Ajouter enfin un dernier bouton vous permettant de soustraire 2 à votre résultat. <br/>
+		4.5- Intégrer un bouton qui combine les fonctions 4.1 et 4.4. <br/>
+		4.6- Intégrer enfin un bouton reset.<br/>
+	</p>
+
+	<p id="res"></p>
+
+	<input type="button" value="+ 10" onclick="plusdix()"  />
+	<input type="button" value="/ 5" onclick="divcinq()"  />
+	<input type="button" value="* 8" onclick="xhuit()"  />
+	<input type="button" value="- 2" onclick="moinsdeux()"  />
+	<input type="button" value="+ 10 & - 2" onclick="plusdix();moinsdeux()" />
+	<input type="button" value="Reset" onclick="reset()"  />
+
+<h1>EX 5</h1>
+<p>Créer une fonction vous permettant d'afficher un nombre aléatoire entre 50 et 1000 (au chargement de la page).</p>
+
+<h1>EX 8</h1>
+<p>Exécuter au chargement de la page une fonction à trois paramètres (trois nombres entiers). Diviser les deux premiers paramètres et effectuez le reste de la division euclidienne à partir du troisième.</p>
+
+<p id="ex8res"></p>
+
+<h1>EX 9</h1>
+<p>Ajouter deux champs inputs et deux boutons à votre page. Créer une fonction permettant de faire la conversion de kg en pounds et une autre permettant de faire la conversion inverse.</p>
+
+	<input type="number" name="kg" id="kg" />kg = <span id="lbstokg"></span><br/>
+	<input type="button" value="Convert KG to Pounds" onclick="kgtolbs()"  /> <br/><br/>
+
+	<input type="number" name="lbs" id="pounds" />lbs = <span id="kgtolbs"></span><br/>
+	<input type="button" value="Convert Pounds to KG" onclick="lbstokg()"  /> <br/>
+
+<h1>EX 10</h1>
+<p>Intégrer un champ inputs et deux boutons à votre page. Un bouton "ajouter" vous permettra d'afficher le champ input. À chaque fois que vous cliquerez sur le bouton "ajouter", les précédentes entrées restent affichées à l'écran. Votre deuxième bouton doit exécuter un RESET de votre résultat.</p>
+
+	<input type="text" onfocus="this.value=''" name="text10" id="text10" />
+	<input type="button" value="Ajouter" onclick="addsentence()"  /> 
+	<input type="button" value="Reset" onclick="resetEX10()"  />
+
+	<p id="resEX10"></p>
+
+<h1>EX11</h1>
+<p>Pari sportif: Créer une fonction vous permettant de calculer les bénéfices à partir d'un montant prédéfini par l'utilisateur et d'une côte dynamique générée aléatoirement. </p>
+
+<input type="number" name="pari" id="pari" />
+<input type="button" value="Génération d'une autre côte" onclick="cote()"  />
+<input type="button" value="Calculer le bénéfice" onclick="calculEX11()"  /> 
+
+<p id="resEX11"></p>
+
+<h1>EX12</h1>
+<p>Calculer un temps de vol en fonction d'une distance prédéfinie. Si on estime qu'un avion est capable de voler en moyenne 1000km par heure, ajouter un champs input (km) qui vous permettra d'estimer et afficher le temps de trajet en heures et minutes. </p>
+
+<input type="number" name="km" id="km" /> km<br/>
+<input type="button" value="Calculer la durée" onclick="dureeEX12()"  /> 
+
+<p id="resEX12"></p>
+
+<h1>EX13</h1>
+<p>Créer une fonction permettant de détecter la largeur disponible sur votre écran - Afficher ensuite le résultat.</p>
+
+<p id="resEX13"></p>
+
+<h1>EX14</h1>
+
+<div id="firstrange" class="ex14" style="background-color: blue"></div>
+<div id="secondrange" class="ex14" style="background-color: white"></div>
+<div id="thirdrange" class="ex14" style="background-color: red"></div><br/><br/><br/><br/><br/><br/><br/>
+
+<input type="range" min="0" max="100" id="rangeEX14" onchange="offresEX14()"/>
+
+<h1>EX15</h1>
+<p>À partir d'un champ input, vérifier si votre nombre est un multiple de 3 et/ou de 7.</p>
+
+<input type="number" name="numEX15" id="numEX15" />
+<input type="button" value="Calculer" onclick="calcEX15()"  /> 
+
+<p id="resEX15"></p>
+
+<script type="text/javascript">
+
+function calculer() {
+
+	var n1 = document.getElementById("num1").value;
+	var n2 = document.getElementById("num2").value;
+	var result1 = n1 * n2;
+	document.getElementById("result").innerHTML = " "+n1+" x "+n2+" = "+result1;
+
+}
+
+var res = 0;
+document.getElementById("res").innerHTML = "Nombre actuel : "+res;
+
+function plusdix() {
+	res = res + 10;
+	document.getElementById("res").innerHTML = "Nombre actuel : "+res;	
+}
+
+function divcinq() {
+	res = res / 5;
+	document.getElementById("res").innerHTML = "Nombre actuel : "+res;	
+}
+
+function xhuit() {
+	res = res * 8;
+	document.getElementById("res").innerHTML = "Nombre actuel : "+res;	
+}
+
+function moinsdeux() {
+	res = res - 2;
+	document.getElementById("res").innerHTML = "Nombre actuel : "+res;	
+}
+
+function reset() {
+	res = 0;
+	document.getElementById("res").innerHTML = "Nombre actuel : "+res;
+}
+
+function random() {
+	var nombreRandom = Math.floor(Math.random() * (1000 - 50) + 50);
+	console.log(+nombreRandom);
+	alert("EX 5 : Le nombre random est "+nombreRandom);
+}
+
+function ex8() {
+	var n1ex8 = Math.floor(Math.random() * (1000 - 5) + 5);
+	var n2ex8 = Math.floor(Math.random() * (100 - 5) + 5);
+	var n3ex8 = Math.floor(Math.random() * (10 - 5) + 5);
+	console.log(+n1ex8, +n2ex8, +n3ex8);
+	var res8 = (n1ex8 / n2ex8) % n3ex8;
+	document.getElementById("ex8res").innerHTML = "Les paramètres sont générés aléatoirement.<br/> ("+n1ex8+" / "+n2ex8+") % "+n3ex8+" = "+res8;
+}
+	window.onload = random(), ex8();
+
+function kgtolbs() {
+	var kg = document.getElementById("kg").value;
+	var tolbs = kg * 2.205;
+	console.log(+tolbs);
+	document.getElementById("lbstokg").innerHTML = +tolbs+" lbs";
+}
+
+function lbstokg() {
+	var lbs = document.getElementById("pounds").value;
+	console.log(+lbs);
+	var tokg = lbs / 2.205;
+	console.log(+tokg);
+	document.getElementById("kgtolbs").innerHTML = +tokg+" kg";
+}
+
+var text = '';
+var text1 = '';
+document.getElementById("resEX10").innerHTML = "Votre phrase est " +text;
+
+function addsentence() {
+	text = document.getElementById("text10").value;
+	var text2 = text1 + text +' ';
+	text1 = text2;
+	console.log(text2);
+	document.getElementById("resEX10").innerHTML = "Votre phrase est " +text2; 
+}
+
+function resetEX10() {
+	text = '';
+	document.getElementById("resEX10").innerHTML = "Votre phrase est " +text;
+}
+
+function cote() {
+	var cote = Math.floor(Math.random() * (10 - 1) + 1);
+	document.getElementById("resEX11").innerHTML = +cote;
+}
+
+function calculEX11() {
+	var benefice = document.getElementById("pari").value;
+	var cote1 = document.getElementById("resEX11").value;
+	var resEX11 = benefice * cote1;
+	document.getElementById("resEX11").innerHTML = "Votre bénéfice est de : "+resEX11+" €";	
+}
+
+function dureeEX12() {
+	var resEX12h = document.getElementById("km").value / 1000; 
+	document.getElementById("resEX12").innerHTML = "Le vol durera "+resEX12h+" heures";
+}
+
+function resizeEX13() {
+	var size = (document.body.clientWidth);
+	document.getElementById("resEX13").innerHTML = "La taille de la fenêtre est de "+size+" pixels";
+}
+window.onresize = resizeEX13();
+
+function offresEX14() {
+	var rangeslider = document.getElementById("rangeEX14");
+	if(rangeslider.value <= 33){
+		document.getElementById("firstrange").style.opacity = 1;
+		document.getElementById("firstrange").style.transition = 'ease 0.5s';
+		document.getElementById("secondrange").style.opacity = 0.1;
+		document.getElementById("secondrange").style.transition = 'ease 0.5s';
+		document.getElementById("thirdrange").style.opacity = 0.1;
+		document.getElementById("thirdrange").style.transition = 'ease 0.5s';
+	}
+	else if ((rangeslider.value >= 33) && (rangeslider.value <= 66)) {
+		document.getElementById("firstrange").style.opacity = 0.1;
+		document.getElementById("secondrange").style.opacity = 1;
+		document.getElementById("thirdrange").style.opacity = 0.1;
+	}
+	else if (rangeslider.value >= 66) {
+		document.getElementById("firstrange").style.opacity = 0.1;
+		document.getElementById("secondrange").style.opacity = 0.1;
+		document.getElementById("thirdrange").style.opacity = 1;
+	}
+}
+
+function calcEX15 () {
+	var numEX15 = document.getElementById("numEX15").value; 
+	if ( Number.isInteger(numEX15 / 3) ) {
+		document.getElementById("resEX15").innerHTML = " "+numEX15+" est un multiple de 3.";
+	}
+	else 
+	{
+		if ( Number.isInteger(numEX15 / 7) ) 
+		{
+			document.getElementById("resEX15").innerHTML = " "+numEX15+" est un multiple de 7.";
+		}
+		else {
+			document.getElementById("resEX15").innerHTML = " "+numEX15+" n'est pas un multiple de 3 ou 7.";
+		}
+	}
+}
+
+
+
+</script>
+
+
+</body>
+</html>
