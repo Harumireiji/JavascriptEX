@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TD MMI</title>
+  </head>
+    
+    <body>
+        <h1>Exercice 9 - Mini Jeu, plus ou moins?</h1>
+        
+       
+        <p>Générer un nombre aléatoire</p>
+      
+        
+        <p>Inclure un champ dans lequel votre utilisateur pourra rentrer une valeur.</p>
+        
+        <p>Ajouter un bouton permettant d'activer votre fonction de contrôle (fonction ayant pour argument la valeur insérée par l'utilisateur).</p>
+      
+        <input type="text" id="champ1" value="">
+        <button onclick="Getvar();">submit</button>
+        
+        <p>Votre nombre est  : <span id="resultat"></span></p>
+        
+        <script>
+            
+                var petit = "Trop petit";
+                var grand = "Trop grand";
+                var egal = "Bien joué !";
+                var nbMax = 100;
+                var nbMin = 0;
+                var nombreRandom = Math.floor(Math.random() * (nbMax - nbMin) + nbMin);
+
+            
+                function Getvar(){
+                    var value1 = Number(document.getElementById('champ1').value);
+
+                    
+                                
+                                if(value1 >= nombreRandom){
+                                   document.getElementById("resultat").innerHTML = grand; 
+                                }
+                                if(value1 <= nombreRandom){
+                                   document.getElementById("resultat").innerHTML = petit; 
+                                }
+                                if(value1 == nombreRandom){
+                                   document.getElementById("resultat").innerHTML = egal; 
+                                }
+                
+                            
+            }
+            
+            
+            
+        
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamique</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+<body>
+	<section id="premier">
+		<h1 id="hey">chien.jpg</h1>
+	</section>
+	<section id="deuxieme">
+		<img id="ouvretoi" src="chien.jpg" />
+		<h2 id="ouvreto">El Doggo</h2>
+		<p id="ouvret">de son vrai nom chien.jpg</p>
+	</section>
+
+	<script type="text/javascript">
+		window.onload = fade();
+		window.onscroll = function apparition() {
+			console.log(document.body.scrollTop)
+
+	      	if (document.body.scrollTop > 420 || document.documentElement.scrollTop > 420) {
+	    		document.getElementById("ouvretoi").classList.add("sesame");
+	    		document.getElementById("ouvreto").classList.add("sesame");
+	    		document.getElementById("ouvret").classList.add("sesame");
+	      	}
+	      	else {
+	      		document.getElementById("ouvretoi").classList.remove("sesame");
+	    		document.getElementById("ouvreto").classList.remove("sesame");
+	    		document.getElementById("ouvret").classList.remove("sesame");
+	      	}
+    	};
+
+		function fade() {setTimeout(fadein, 50)};
+		function fadein() {document.getElementById("hey").classList.add("onload");};
+
+	</script>
+</body>
+</html>

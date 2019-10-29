@@ -27,15 +27,15 @@ button {border-radius: 5px; background-color: #FFF; border: none; height: 30px}
 	height: auto;
 	background-color: #333;
 	transition: 1s ease;
-	float: right;
-	position: relative;
+	position: absolute;
+	right: 0;
 	display: none;
 	padding: 5px;
 }
 
 @media screen and (max-width:769px) {
 
-#navbar {width:30%}
+#navbar {width:100%}
 #test {width: 100%;}
 
 }

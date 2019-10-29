@@ -1,0 +1,32 @@
+﻿body {margin: 0; padding: 0;}
+
+#premier {
+	background-image: url('chien.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {color: #FFF; font-size: 60px; opacity: 0;}
+h1.onload {opacity: 1; transition: 1s ease;}
+
+#deuxieme {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+section img {padding: 5px; width: 40%; border: 1px solid rgba(0,0,0,0.2); opacity: 0; transition: 1s ease;}
+
+h2 {color: #000; font-size: 40px; opacity: 0; transition: 1s ease;}
+p {color: #000; font-size: 20px; opacity: 0; transition: 1s ease;}
+
+img.sesame, h2.sesame, p.sesame {opacity: 1; transition: 1s ease;}
