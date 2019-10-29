@@ -1,0 +1,41 @@
+﻿body {margin: 0; padding: 0; overflow-x: hidden;}
+
+nav {background-color: #333; padding: 0px 15px; height: 5em; display: flex; align-items: center; justify-content: space-between;}
+nav img {height: 4em;}
+#nav {transition: 1s ease;}
+
+button {border-radius: 5px; background-color: #FFF; border: none; height: 30px}
+
+#navbar {
+	margin-left: -100%;
+	width: 30%;
+	height: 45em;
+	background-color: #AAA;
+	transition: 1s ease;
+	float: left;
+}
+
+#test {
+	width: 40%;
+	max-width: 1024px;
+	height: 45em;
+	background-color: #DDD;
+	margin: 0 auto;
+}
+
+#dropdown {
+	height: auto;
+	background-color: #333;
+	transition: 1s ease;
+	float: right;
+	position: relative;
+	display: none;
+	padding: 5px;
+}
+
+@media screen and (max-width:769px) {
+
+#navbar {width:30%}
+#test {width: 100%;}
+
+}

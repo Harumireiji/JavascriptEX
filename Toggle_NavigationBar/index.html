@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Toggle</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+<body>
+	<nav id="nav">
+		<button onclick="toggle()">Menu</button>
+		<img src="logo.png" alt="Logo New Yokote" />
+		<button onclick="dropdown()">Dropdown</button>
+	</nav>
+	<div id="dropdown">
+		<button>S'identifier</button><button>S'inscrire</button>
+	</div>
+	<div id="navbar">
+		<ul>
+			<li><a href="#" alt="lien 1">lien 1</a></li>
+			<li><a href="#" alt="lien 2">lien 2</a></li>
+		</ul>
+	</div>
+	<div id="test">
+		<span>texte test</span>
+	</div>
+
+	<script type="text/javascript">
+
+	window.onscroll = function disparition() {
+
+    var y = Math.floor(window.scrollY);
+
+      if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) 
+      {
+    document.getElementById("nav").style.opacity="0";
+    document.getElementById("dropdown").style.opacity="0";
+      } else {
+    document.getElementById("nav").style.opacity="1";
+    document.getElementById("dropdown").style.opacity="1";
+      }
+
+    };
+
+	margin = true;
+	display = true;
+
+	function toggle (){
+    if(margin){
+        document.getElementById("navbar").style.marginLeft="0%";
+    }
+    else{
+        document.getElementById("navbar").style.marginLeft="-100%";
+    }
+
+    margin = !margin;
+
+    };
+
+    function dropdown (){
+    	if(display){
+        document.getElementById("dropdown").style.display="block";
+    }
+    else{
+        document.getElementById("dropdown").style.display="none";
+    }
+
+    display = !display;
+    }
+
+	</script>
+</body>
+</html>
