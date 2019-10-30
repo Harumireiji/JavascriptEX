@@ -4,24 +4,33 @@ nav {background-color: #333; padding: 0px 15px; height: 5em; display: flex; alig
 nav img {height: 4em;}
 #nav {transition: 1s ease;}
 
+a:hover {color: red;}
+
 button {border-radius: 5px; background-color: #FFF; border: none; height: 30px}
 
 #navbar {
 	margin-left: -100%;
 	width: 30%;
-	height: 45em;
-	background-color: #AAA;
+	height: 100vh;
+	background-color: #DDD;
 	transition: 1s ease;
 	float: left;
 }
 
+ul, li, ol {list-style: none;}
+#navbar button {width: 90%; margin-bottom: 5px;}
+
 #test {
-	width: 40%;
+	width: 80%;
 	max-width: 1024px;
-	height: 45em;
-	background-color: #DDD;
+	height: 100vh;
+	background-color: #EEE;
 	margin: 0 auto;
+	padding: 15px 0px;
+	text-align: justify;
 }
+
+p {padding: 0px 15px;}
 
 #dropdown {
 	height: auto;
@@ -30,7 +39,7 @@ button {border-radius: 5px; background-color: #FFF; border: none; height: 30px}
 	position: absolute;
 	right: 0;
 	display: none;
-	padding: 5px;
+	padding: 15px;
 }
 
 @media screen and (max-width:769px) {
