@@ -1,36 +1,38 @@
-﻿body {margin: 0; padding: 0; overflow-x: hidden;}
+﻿html{min-height:100%;position:relative;}
+
+body {margin: 0; padding: 0; overflow-x: hidden; width: 100%; height: 100vh;}
 
 nav {background-color: #333; padding: 0px 15px; height: 5em; display: flex; align-items: center; justify-content: space-between;}
 nav img {height: 4em;}
 #nav {transition: 1s ease;}
 
-a:hover {color: red;}
+a:hover {color: magenta;}
 
 button {border-radius: 5px; background-color: #FFF; border: none; height: 30px}
 
 #navbar {
 	margin-left: -100%;
 	width: 30%;
-	height: 100vh;
-	background-color: #DDD;
+	height: inherit;
+	padding-bottom: 70px;
+	background-color: #333;
 	transition: 1s ease;
 	float: left;
+	z-index: 999;
 }
 
 ul, li, ol {list-style: none;}
 #navbar button {width: 90%; margin-bottom: 5px;}
 
 #test {
-	width: 80%;
+	width: 70%;
+	height: inherit;
 	max-width: 1024px;
-	height: 100vh;
 	background-color: #EEE;
 	margin: 0 auto;
-	padding: 15px 0px;
+	padding: 35px;
 	text-align: justify;
 }
-
-p {padding: 0px 15px;}
 
 #dropdown {
 	height: auto;
@@ -40,6 +42,7 @@ p {padding: 0px 15px;}
 	right: 0;
 	display: none;
 	padding: 15px;
+	border-radius: 0px 0px 0px 15px;
 }
 
 @media screen and (max-width:769px) {
